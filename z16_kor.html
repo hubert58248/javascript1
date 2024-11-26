@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+ <head> 
+ <title> proste obliczenia</title> 
+ <meta charset="utf-8"> 
+ </head> 
+<body>
+<div style="color:red;font-size:50px;">
+ <script language="JavaScript">
+var liczba1=prompt("Podaj pierwszą liczbę A=","");
+var liczba2=prompt("Podaj drugą liczbę B=","");
+var a_kor=parseFloat(liczba1);
+var b_kor=parseFloat(liczba2);
+ document.write("A="+a_kor+" <br> ");
+ document.write("B="+b_kor+" <br> ");
+ d=a_kor*a_kor*a_kor;
+ e=3*(a_kor*a_kor)*b_kor;
+ f=3*(b_kor*b_kor)*a_kor;
+ g=b_kor*b_kor*b_kor;
+ suma=d+e+f+g;
+ document.write("("+a_kor+"+"+b_kor+")"+"^3 = "+a_kor+"^3 + 3*(("+a_kor+")^2)*("+b_kor+") + 3*("+a_kor+")*"+"(("+b_kor+")^2) + "+b_kor+"^3 ="+d+"+"+e+"+"+f+"+"+g+"="+suma+"<br>");
+ </script>
+</div>
