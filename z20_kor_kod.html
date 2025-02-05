@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kod zadania 20 - Medusheuski</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<textarea rows="65" cols="100">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 20 - Trójkąt</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .input-group { margin: 10px 0; }
+        .result { color: red; font-size: 24px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h2>Obliczanie długości boków trójkąta</h2>
+    <div class="input-group">
+        Punkt A - x: <input type="text" id="xa_med" value="0">
+        y: <input type="text" id="ya_med" value="0">
+    </div>
+    <div class="input-group">
+        Punkt B - x: <input type="text" id="xb_med" value="0">
+        y: <input type="text" id="yb_med" value="0">
+    </div>
+    <div class="input-group">
+        Punkt C - x: <input type="text" id="xc_med" value="0">
+        y: <input type="text" id="yc_med" value="0">
+    </div>
+    <input type="button" value="Oblicz AB" onclick="AB_med()">
+    <input type="button" value="Oblicz BC" onclick="BC_med()">
+    <input type="button" value="Oblicz AC" onclick="AC_med()">
+    <div id="wynik" class="result"></div>
+
+    <script>
+        function AB_med() {
+            var xa_med = parseFloat(document.getElementById('xa_med').value);
+            var ya_med = parseFloat(document.getElementById('ya_med').value);
+            var xb_med = parseFloat(document.getElementById('xb_med').value);
+            var yb_med = parseFloat(document.getElementById('yb_med').value);
+            var dlugoscAB = Math.sqrt(Math.pow(xb_med - xa_med, 2) + Math.pow(yb_med - ya_med, 2));
+            document.getElementById('wynik').innerHTML = "Długość boku AB = " + dlugoscAB.toFixed(2);
+        }
+
+        function BC_med() {
+            var xb_med = parseFloat(document.getElementById('xb_med').value);
+            var yb_med = parseFloat(document.getElementById('yb_med').value);
+            var xc_med = parseFloat(document.getElementById('xc_med').value);
+            var yc_med = parseFloat(document.getElementById('yc_med').value);
+            var dlugoscBC = Math.sqrt(Math.pow(xc_med - xb_med, 2) + Math.pow(yc_med - yb_med, 2));
+            document.getElementById('wynik').innerHTML = "Długość boku BC = " + dlugoscBC.toFixed(2);
+        }
+
+        function AC_med() {
+            var xa_med = parseFloat(document.getElementById('xa_med').value);
+            var ya_med = parseFloat(document.getElementById('ya_med').value);
+            var xc_med = parseFloat(document.getElementById('xc_med').value);
+            var yc_med = parseFloat(document.getElementById('yc_med').value);
+            var dlugoscAC = Math.sqrt(Math.pow(xc_med - xa_med, 2) + Math.pow(yc_med - ya_med, 2));
+            document.getElementById('wynik').innerHTML = "Długość boku AC = " + dlugoscAC.toFixed(2);
+        }
+    </script>
+</body>
+</html>
+</textarea>
+</body>
+</html>
