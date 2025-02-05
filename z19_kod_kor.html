@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Kod zadania 19 - Medusheuski</title>
+<title>Kod zadania 19 - Kordalski</title>
 <meta charset="utf-8">
 </head>
 <body>
@@ -17,23 +17,23 @@
 </head>
 <body>
 <script type="text/javascript">
- function Pole_med()
+ function Pole_kor()
  {
-    var a_med = parseFloat(document.getElementById('dlugosc').value);
-    var b_med = a_med * a_med;
-    document.getElementById("nazwa").innerHTML ="Pole kwadratu= " + b_med.toFixed(2) + " cm^2";
+    var a_kor = parseFloat(document.getElementById('dlugosc').value);
+    var b_kor = a_kor * a_kor;
+    document.getElementById("nazwa").innerHTML ="Pole kwadratu= " + b_kor.toFixed(2) + " cm^2";
  }
- function obwod_med()
+ function obwod_kor()
  {
-    var a_med = parseFloat(document.getElementById('dlugosc').value);
-    var b_med = 4 * a_med;
-    document.getElementById("nazwa").innerHTML ="Obwód kwadratu= " + b_med.toFixed(2) + " cm";
+    var a_kor = parseFloat(document.getElementById('dlugosc').value);
+    var b_kor = 4 * a_kor;
+    document.getElementById("nazwa").innerHTML ="Obwód kwadratu= " + b_kor.toFixed(2) + " cm";
  }
 </script>
  <h1>Wszystko o KWADRACIE</h1><br><br>
  Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
- <input type="button" class="button" name="pole" value="Oblicz pole" onclick="Pole_med()"><br><br>
- <input type="button" class="button" name="obwod" value="Oblicz obwod" onclick="obwod_med()"><br><br>
+ <input type="button" class="button" name="pole" value="Oblicz pole" onclick="Pole_kor()"><br><br>
+ <input type="button" class="button" name="obwod" value="Oblicz obwod" onclick="obwod_kor()"><br><br>
  <div style="color:red;font-size:50px;" id="nazwa"></div>
 </body>
 </html>
