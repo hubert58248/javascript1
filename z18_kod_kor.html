@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Kod zadania 18 - Medusheuski</title>
+<title>Kod zadania 18 - Kordalski</title>
 <meta charset="utf-8">
 </head>
 <body>
 <textarea rows="31" cols="100">
 <!DOCTYPE html>
 <head>
-<title>Użycie funkcji - Medusheuski</title>
+<title>Użycie funkcji - Kordalski</title>
 <meta charset="utf-8">
 </head>
 <body>
@@ -17,33 +17,33 @@
 var a=parseFloat(prompt("a=",""));
 var b=parseFloat(prompt("b=",""));
 
-function suma_med(a, b) {
+function suma_kor(a, b) {
     return a + b;
 }
 
-function odejmowanie_med(a, b) {
+function odejmowanie_kor(a, b) {
     return a - b;
 }
 
-function mnozenie_med(a, b) {
+function mnozenie_kor(a, b) {
     return a * b;
 }
 
-function od_kwadratu_med(a, b) {
+function od_kwadratu_kor(a, b) {
     return [Math.pow(a, 2), Math.pow(b, 2)];
 }
 
-function reszta_z_dzielenia_a_przez_b_med(a, b) {
+function reszta_z_dzielenia_a_przez_b_kor(a, b) {
     return a % b;
 }
 
-document.write("suma=" + suma_med(a,b) + "<br>");
-document.write("odejmowanie=" + odejmowanie_med(a,b) + "<br>");
-document.write("mnożenie=" + mnozenie_med(a,b) + "<br>");
-let kwadraty = od_kwadratu_med(a,b);
+document.write("suma=" + suma_kor(a,b) + "<br>");
+document.write("odejmowanie=" + odejmowanie_kor(a,b) + "<br>");
+document.write("mnożenie=" + mnozenie_kor(a,b) + "<br>");
+let kwadraty = od_kwadratu_kor(a,b);
 document.write("a do kwadratu=" + kwadraty[0] + "<br>");
 document.write("b do kwadratu=" + kwadraty[1] + "<br>");
-document.write("reszta z dzielenia=" + reszta_z_dzielenia_a_przez_b_med(a,b) + "<br>");
+document.write("reszta z dzielenia=" + reszta_z_dzielenia_a_przez_b_kor(a,b) + "<br>");
 </script>
 </div>
 </body>
