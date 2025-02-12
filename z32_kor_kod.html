@@ -7,35 +7,33 @@
 </head>
 <body>
     <textarea style="width: 400px; height:850px;">
-<html>
-
-<head>
-    <script type="text/javascript">
-        function Autobus(_ilu_pasazerow, _nazwa_linii, _marka) {
-            this.ilu_pasazerow = _ilu_pasazerow;
-            this.nazwa_linii = _nazwa_linii;
-            this.marka = _marka;
-            this.Autobus_wyswietl_warkusz =function() {
-                document.write(`Autobus marki ${this.marka}, linia ${this.nazwa_linii} przewosi ${this.ilu_pasazerow} pasażerów`);
-            }
-        }
-        Autobus.prototype.wypisz = function ()
-        {
-            alert(this.ilu_pasazerow + ' ' + this.nazwa_linii + ' ' + this.marka)
-        };
-        var autobus1 = new Autobus(100, "131 Matemblewo", "Solaris");
-        var autobus2 = new Autobus(50, '35 Mokotów', 'Jelcz');
-        autobus1.wypisz();
-        autobus2.wypisz();
-        document.write("dostęp do właściwości" + "<br>");
-        document.write("autobus pierwszy" + " " + autobus1.ilu_pasazerow + " " + autobus1.marka + " " + autobus1.nazwa_linii);
-    </script>
-</head>
-
-<body>
-    <br>
-    programowanie obiektowe
-</body>
+<html> 
+     <head> 
+           <script type="text/javascript"> 
+              function owoc(nazwa,kolor,smak)//początek konstruktora 
+  { 
+   this.nazwa=nazwa; 
+   this.kolor=kolor; 
+   this.smak=smak;   
+  }//koniec konstruktora 
+              klient.prototype.wypisz = function () //definicja metody 
+      { 
+         alert(this.nazwa + ' ' + this.kolor+ ' ' + this.smak); 
+      }; 
+  var owoc1 = new owoc("Jabłko", "czerwony", "słodkie"); // nowy obiekt osoba1 
+  var owoc2 = new owoc('Cytryna', 'żółty', 'kwaśny'); 
+  owoc1.wypisz(); // uruchomienie metody wypisz() dotyczącej osoby 1 
+  owoc2.wypisz(); 
+                document.write("dostęp do właściwości"+"<br>"); 
+// poniżej dostęp do pól osoby1 
+     document.write("owoc pierwszy"+"   "+owoc1.nazwa+"   "+owoc1.kolor+"   "+owoc1.smak); 
+            </script> 
+     </head> 
+<body> 
+ <br> 
+   programowanie obiektowe   
+</body> 
+</html>
     </textarea>
 </body>
 </html>
