@@ -8,14 +8,15 @@
 <body>
     <textarea style="width: 400px; height:850px;">
 <html>
-  <body>
-    <div style="color:red;font-size:50px;">
-      <script language="Javascript">
-      var silnia_kor=1;
-      for(I=1;i<=silnia_koniec;i++){
-      silnia_kor=silnia_koniec*i
-      }
-      document.write(silnia_koniec+"!="+silnia_kor);
+  <body style="color:red;font-size:50px">
+    <div>
+      <script language="javascript"> 
+        var silnia_koniec=parseFloat(prompt("n=",""));
+        var silnia_kor=1;
+        for (i=1; i<=silnia_koniec; i++) {
+          silnia_kor=silnia_kor*i;
+        }
+        document.write(silnia_koniec+"!="+silnia_kor);
       </script>
     </div>
   </body>
