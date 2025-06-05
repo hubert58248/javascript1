@@ -6,34 +6,39 @@
     <style>
         body {
             font-family: monospace;
-            white-space: pre;
         }
     </style>
 </head>
 <body>
+    <pre id="prostokat"></pre>
+
     <script>
-        let dl_kor_nazwiska = 9; // Kordalski
-        let dl_kor_imienia = 6;  // Hubert
+        let dl_kor_nazwiska = 9;
+        let dl_kor_imienia = 6;
 
-        let a_kor = (dl_kor_nazwiska % 9) + 5; 
-        let b_kor = (dl_kor_imienia % 6) + 20; 
+        let a_kor = (dl_kor_nazwiska % 9) + 5;
+        let b_kor = (dl_kor_imienia % 6) + 20;
 
-        for (let i_kor = 0; i_kor < b_kor; i_kor++) {
-            document.write("*");
+        let wynik = "";
+
+        for (let i = 0; i < b_kor; i++) {
+            wynik += "*";
         }
-        document.write("<br>");
+        wynik += "\n";
 
-        for (let i_kor = 0; i_kor < a_kor - 2; i_kor++) {
-            document.write("*");
-            for (let j_kor = 0; j_kor < b_kor - 2; j_kor++) {
-                document.write("&nbsp;");
+        for (let i = 0; i < a_kor - 2; i++) {
+            wynik += "*";
+            for (let j = 0; j < b_kor - 2; j++) {
+                wynik += " ";
             }
-            document.write("*<br>");
+            wynik += "*\n";
         }
 
-        for (let i_kor = 0; i_kor < b_kor; i_kor++) {
-            document.write("*");
+        for (let i = 0; i < b_kor; i++) {
+            wynik += "*";
         }
+
+        document.getElementById("prostokat").textContent = wynik;
     </script>
 </body>
 </html>
