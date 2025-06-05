@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 57 - Pierwiastki liczb</title>
+</head>
+<body>
+
+    <h1>Zadanie 57 - Pierwiastki liczb</h1>
+    <p>Numer w dzienniku: <b>5</b></p>
+
+    <input type="button" value="Uruchom program" onclick="pierwiastki_kor()" />
+
+    <div id="wynik"></div>
+
+    <script>
+        function pierwiastki_kor() {
+            var num_kor = 5;
+            var wynikHTML_kor = "<h2>Wynik:</h2>";
+            var licznik_kor = 0;
+
+            for (var i_kor = num_kor; i_kor <= num_kor + 15; i_kor++) {
+                var pierw_2_kor = Math.sqrt(i_kor);
+                var pierw_4_kor = Math.sqrt(pierw_2_kor);
+
+                wynikHTML_kor += "I=" + i_kor +
+                    " pierw_2(" + i_kor + ")=" + pierw_2_kor.toFixed(2) +
+                    " pierw_4(" + i_kor + ")=" + pierw_4_kor.toFixed(2) + "<br>";
+
+                licznik_kor++;
+
+                if (licznik_kor % 3 === 0) {
+                    wynikHTML_kor += "<hr>";
+                    document.getElementById("wynik").innerHTML = wynikHTML_kor;
+                    var kontynuuj_kor = confirm("Kliknij OK, aby kontynuować...");
+                    if (!kontynuuj_kor) return;
+                }
+            }
+
+            document.getElementById("wynik").innerHTML = wynikHTML_kor;
+        }
+    </script>
+
+</body>
+</html>
