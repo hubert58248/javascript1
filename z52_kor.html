@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Prostokąt z gwiazdek</title>
+    <style>
+        body {
+            font-family: monospace;
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let dl_kor_nazwiska = 9; // Kordalski
+        let dl_kor_imienia = 6;  // Hubert
+
+        let a_kor = (dl_kor_nazwiska % 4) + 5; 
+        let b_kor = (dl_kor_imienia % 6) + 20; 
+
+        for (let i_kor = 0; i_kor < b_kor; i_kor++) {
+            document.write("*");
+        }
+        document.write("<br>");
+
+        for (let i_kor = 0; i_kor < a_kor - 2; i_kor++) {
+            document.write("*");
+            for (let j_kor = 0; j_kor < b_kor - 2; j_kor++) {
+                document.write("&nbsp;");
+            }
+            document.write("*<br>");
+        }
+
+        for (let i_kor = 0; i_kor < b_kor; i_kor++) {
+            document.write("*");
+        }
+    </script>
+</body>
+</html>
